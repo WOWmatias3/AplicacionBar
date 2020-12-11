@@ -1,0 +1,35 @@
+﻿<Controls:MetroWindow x:Name="banner" x:Class="AplicacionBar.Bar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"              
+        xmlns:local="clr-namespace:AplicacionBar"
+        mc:Ignorable="d"
+        Title="Bar" Height="515.3" Width="1360" WindowStartupLocation="CenterScreen" Loaded="banner_Loaded">
+
+
+    <Grid Margin="0,0,2,-5">
+        <Label x:Name="lbl_titulo" Content="Listado Ordenes" HorizontalAlignment="Left" Margin="593,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <DataGrid x:Name="dtg_espera" HorizontalAlignment="Left" Height="214" Margin="8,117,0,0" VerticalAlignment="Top" Width="442" SelectionChanged="dtg_espera_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btn_retirado" Content="Retirado" HorizontalAlignment="Left" Margin="1067,356,0,0" VerticalAlignment="Top" Width="137" Height="50"/>
+        <Button x:Name="btn_retirar" Content="Listo para Retirar" HorizontalAlignment="Left" Margin="607,356,0,0" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.88,-0.704" Height="50"/>
+        <Button x:Name="btn_preparacion" Content="En Preparacion" HorizontalAlignment="Left" Margin="154,356,0,0" VerticalAlignment="Top" Width="137" Height="50" Click="btn_preparacion_Click"/>
+        <Button x:Name="btn_volver" Content="Volver" HorizontalAlignment="Left" Margin="1269,442,0,0" VerticalAlignment="Top" Width="75" Click="btn_volver_Click"/>
+        <Label x:Name="lbl_user" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="-9.605,0.615" Width="149" Loaded="lbl_user_Loaded" Height="21"/>
+        <Button x:Name="btn_play" Content="Iniciar" HorizontalAlignment="Left" Margin="477,442,0,0" VerticalAlignment="Top" Width="131" Click="btn_play_Click"/>
+        <Button x:Name="btn_stop" Content="Detener" HorizontalAlignment="Left" Margin="748,442,0,0" VerticalAlignment="Top" Width="131" Click="btn_stop_Click"/>
+        <DataGrid x:Name="dtg_listo" HorizontalAlignment="Left" Height="214" Margin="902,117,0,0" VerticalAlignment="Top" Width="442"/>
+        <DataGrid x:Name="dtg_preparacion" HorizontalAlignment="Left" Height="214" Margin="455,117,0,0" VerticalAlignment="Top" Width="442"/>
+       
+   
+        <Label x:Name="lbl_espera" Content="En espera" HorizontalAlignment="Left" Margin="190,70,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="lbl_preparacion" Content="En preparacion" HorizontalAlignment="Left" Margin="614,70,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.487,1.553" Width="130"/>
+        <Label x:Name="lbl_listo" Content="Preparado" HorizontalAlignment="Left" Margin="1098,79,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+    </Grid>
+</Controls:MetroWindow>
